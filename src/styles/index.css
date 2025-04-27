@@ -27,3 +27,7 @@
     width: 135px;
     height: 135px;
 }
+
+.shine{
+    box-shadow: -2px -1px 84px 22px rgba(235,237,140,1);
+}

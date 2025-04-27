@@ -1,15 +1,32 @@
 import React from "react";
-import {Light} from './Light.jsx'
+import {useState} from 'react';
+import { Light } from './Light.jsx'
 
-//create your first component
 const Home = () => {
+
+	const [activeLight, setActiveLight] = useState(false);
+
 	return (
-        <div className="traffic-light">
+		<div className="traffic-light">
 			<div className="pole"></div>
 			<div className="light-box">
-				<Light color= 'red'/>
-				<Light color= 'yellow'/>
-				<Light color= 'green'/>
+				<Light
+					color='red'
+					isActive= {activeLight === 'red'} 
+					onClick= {() => setActiveLight('red')}
+				/>
+
+				<Light 
+					color='yellow'
+					isActive= {activeLight === 'yellow'}
+					onClick= {() => setActiveLight('yellow')}
+
+				/>
+				<Light 
+					color='green'
+					isActive= {activeLight === 'green'}
+					onClick= {() => setActiveLight('green')}
+				 />
 			</div>
 		</div>
 	);

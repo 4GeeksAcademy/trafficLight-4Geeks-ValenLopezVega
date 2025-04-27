@@ -1,5 +1,3 @@
-// import {useState}
-
 export function Light(props) {
     const colorClass = {
         red: 'bg-danger',
@@ -8,6 +6,7 @@ export function Light(props) {
     };
 
     return (
-        <div className={`light rounded-circle ${colorClass[props.color]}`}></div>
+        <div className={`light rounded-circle ${colorClass[props.color]} ${props.isActive ? 'shine' : '' }`}
+        onClick={props.onClick}></div>
     );
 };
